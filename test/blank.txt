@@ -1,2 +1,3 @@
 documento que describe el algoritmo
 se agrega mas texto a este archivo
+otra linea para comprobar
