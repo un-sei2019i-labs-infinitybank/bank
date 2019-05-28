@@ -1,4 +1,4 @@
-package com.example.bank_app;
+package com.example.bank_app.businessLogic;
 
 import android.content.ContentValues;
 import android.content.Intent;
@@ -9,7 +9,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class MainIndex extends AppCompatActivity {
+import com.example.bank_app.DataAccess.AdminSQLite;
+import com.example.bank_app.R;
+import com.example.bank_app.presentation.MainActivity;
+
+public class RegisterUser extends AppCompatActivity {
 
     private EditText et_code, et_user, et_password;
     @Override

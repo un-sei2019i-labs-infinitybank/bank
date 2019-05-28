@@ -1,4 +1,4 @@
-package com.example.bank_app;
+package com.example.bank_app.businessLogic;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -9,17 +9,21 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class LoginUser extends AppCompatActivity {
+import com.example.bank_app.DataAccess.AdminSQLite;
+import com.example.bank_app.R;
+import com.example.bank_app.businessLogic.RegisterUser;
+
+public class LoginAdmin extends AppCompatActivity {
 
     private EditText et_user, et_password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login_user);
+        setContentView(R.layout.activity_login_admin);
 
-        et_user =(EditText)findViewById(R.id.txt_user);
-        et_password =(EditText)findViewById(R.id.txt_pass);
+        et_user =(EditText)findViewById(R.id.txt_admin);
+        et_password =(EditText)findViewById(R.id.txt_passA);
     }
 
     //metodo login de usuario
@@ -42,7 +46,7 @@ public class LoginUser extends AppCompatActivity {
             String pass=fila.getString(1);
 
             if(user.equals(usua) && password.equals(pass)){
-                Intent ven = new Intent(this, UserPlataform.class);
+                Intent ven = new Intent(this, RegisterUser.class);
                 startActivity(ven);
 
                 et_user.setText("");
@@ -50,7 +54,7 @@ public class LoginUser extends AppCompatActivity {
             }
 
         }else{
-            Toast.makeText(this,"Usuario no registrado", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Administrador no registrado", Toast.LENGTH_SHORT).show();
         }
 
 
