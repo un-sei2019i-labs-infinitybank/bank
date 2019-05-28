@@ -11,48 +11,22 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText et_user, et_password;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        et_user =(EditText)findViewById(R.id.txt_user);
-        et_password =(EditText)findViewById(R.id.txt_pass);
     }
 
-    //metodo login de usuario
-
-    public void Ingresar(View view){
-
-        AdminSQLite admin = new AdminSQLite(this, "gerence", null, 1);
-        SQLiteDatabase db = admin.getWritableDatabase();
-
-        String user = et_user.getText().toString();
-        String password = et_password.getText().toString();
-
-        Cursor fila = db.rawQuery
-                ("select user, password from users where user='" + user + "'and password='" + password+"'",null);
+    //eleccion de usuario
 
 
-           if(fila.moveToFirst()){
+    public void IngresoAdmin(View view){
+        Intent ven = new Intent(this, LoginAdmin.class);
+        startActivity(ven);
+    }
 
-                String usua=fila.getString(0);
-                String pass=fila.getString(1);
-
-                if(user.equals(usua) && password.equals(pass)){
-                    Intent ven = new Intent(this, MainIndex.class);
-                    startActivity(ven);
-
-                    et_user.setText("");
-                    et_password.setText("");
-                }
-
-            }else{
-               Toast.makeText(this,"Usuario no registrado", Toast.LENGTH_SHORT).show();
-           }
-
-
+    public  void IngresarUsuario(View view){
+        Intent ven = new Intent(this, LoginUser.class);
+        startActivity(ven);
     }
 }

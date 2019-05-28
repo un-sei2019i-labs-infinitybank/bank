@@ -13,6 +13,7 @@ public class AdminSQLite extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table users(code int primary key, user text, password text)");
         db.execSQL("insert into users values(01,'admin', 'admin')");
+        db.execSQL("insert into users values(02,'user', 'user')");
 
     }
 
@@ -20,6 +21,7 @@ public class AdminSQLite extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("create table users(code int primary key, user text, password text)");
         db.execSQL("insert into users values(01,'admin', 'admin')");
+        db.execSQL("insert into users values(02,'user', 'user')");
 
     }
 }
