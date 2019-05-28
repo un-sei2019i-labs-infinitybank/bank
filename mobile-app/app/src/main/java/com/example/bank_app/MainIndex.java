@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainIndex extends AppCompatActivity {
 
@@ -38,6 +39,8 @@ public class MainIndex extends AppCompatActivity {
 
         Intent ven = new Intent(this, MainActivity.class);
         startActivity(ven);
+
+        Toast.makeText(this, "registro exitoso", Toast.LENGTH_SHORT).show();
     }
     public void Cancelar(View view){
         finish();
