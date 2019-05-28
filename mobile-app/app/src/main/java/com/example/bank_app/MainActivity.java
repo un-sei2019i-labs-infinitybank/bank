@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText et_user, et_password;
+    EditText et_user, et_password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,14 +47,12 @@ public class MainActivity extends AppCompatActivity {
 
                     et_user.setText("");
                     et_password.setText("");
-                }else {
-
-                    Toast.makeText(this, "El Usuario es incorrecto", Toast.LENGTH_SHORT).show();
                 }
 
             }else{
-                Toast.makeText(this, "El Usuario no existe", Toast.LENGTH_SHORT).show();
-            }
+               Toast.makeText(this,"Usuario no registrado", Toast.LENGTH_SHORT).show();
+           }
+
 
     }
 }

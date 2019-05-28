@@ -11,15 +11,15 @@ public class AdminSQLite extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table users(code int primary key autoincrement, user text, password text)");
-        db.execSQL("insert into users values('admin', 'admin')");
+        db.execSQL("create table users(code int primary key, user text, password text)");
+        db.execSQL("insert into users values(01,'admin', 'admin')");
 
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("create table users(code int primary key autoincrement, user text, password text)");
-        db.execSQL("insert into users values('admin', 'admin')");
+        db.execSQL("create table users(code int primary key, user text, password text)");
+        db.execSQL("insert into users values(01,'admin', 'admin')");
 
     }
 }
