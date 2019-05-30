@@ -9,6 +9,10 @@ public class user {
     private String password;
     private long balance;
 
+    public String getId() {
+        return name;
+    }
+
     public String getName() {
         return name;
     }
