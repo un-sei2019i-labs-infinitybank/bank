@@ -1,6 +1,6 @@
 package com.example.bank_app.DataAccess.models;
 
-public class Users {
+public class user {
     private int id;
     private String name;
     private String account;
