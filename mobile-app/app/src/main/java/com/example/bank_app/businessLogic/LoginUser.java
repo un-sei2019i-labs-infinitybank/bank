@@ -9,7 +9,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+<<<<<<< HEAD
+import com.example.bank_app.DataAccess.database.Database;
+=======
 import com.example.bank_app.DataAccess.database.AdminSQLite;
+>>>>>>> 378c1852c1748abfc6df2220604f14cf8edc540e
 import com.example.bank_app.R;
 import com.example.bank_app.presentation.UserPlataform;
 
@@ -30,7 +34,7 @@ public class LoginUser extends AppCompatActivity {
 
     public void Ingresar(View view){
 
-        AdminSQLite admin = new AdminSQLite(this, "gerence", null, 1);
+        Database admin = new Database(this, "gerence", null, 1);
         SQLiteDatabase db = admin.getWritableDatabase();
 
         String user = et_user.getText().toString();
