@@ -2,7 +2,7 @@ package com.example.bank_app.DataAccess.repositories;
 
 import com.example.bank_app.DataAccess.models.user;
 
-public class userRepository {
+public class userRepository extends user{
 
     user usuario;
 
