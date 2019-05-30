@@ -1,6 +1,4 @@
 package com.example.bank_app.DataAccess.repositories;
 
-public class userRepositories {
-
-
+public class userRepository {
 }
