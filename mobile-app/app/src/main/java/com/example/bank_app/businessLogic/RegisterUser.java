@@ -8,8 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import com.example.bank_app.DataAccess.AdminSQLite;
+import com.example.bank_app.DataAccess.database.database;
 import com.example.bank_app.R;
 import com.example.bank_app.presentation.MainActivity;
 
@@ -27,7 +26,7 @@ public class RegisterUser extends AppCompatActivity {
     }
 
     public void Registrar(View view){
-        AdminSQLite admin = new AdminSQLite(this, "gerence", null, 1);
+        database admin = new database(this, "gerence", null, 1);
         SQLiteDatabase db = admin.getWritableDatabase();
         String code = et_code.getText().toString();
         String user = et_user.getText().toString();
