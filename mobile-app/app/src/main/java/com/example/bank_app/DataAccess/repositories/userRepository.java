@@ -10,7 +10,7 @@ public class userRepository {
         usuario = new user();
     }
     public void getUserById(){
-        usuario.
+        usuario.getId();
     }
     public void  updateUser(){
 
