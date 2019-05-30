@@ -6,5 +6,5 @@ public class Users {
     private String account;
     private String password;
     private long balance;
-    
+
 }
