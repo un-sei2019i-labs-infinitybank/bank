@@ -1,6 +1,8 @@
 package com.example.bank_app.DataAccess.models;
 
 public class user {
+
+    user usuario = new user();
     private int id;
     private String name;
     private String account;

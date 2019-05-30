@@ -1,8 +1,13 @@
 package com.example.bank_app.DataAccess.repositories;
 
-public class userRepository {
-    public void createUser(){
+import com.example.bank_app.DataAccess.models.user;
 
+public class userRepository {
+
+    user usuario;
+
+    public void createUser(){
+        usuario = new user();
     }
     public void getUserById(){
 
