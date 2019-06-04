@@ -44,5 +44,5 @@ public class Generador {
         //        phone.addStringProperty("number");
         //        return phone;
         //    }
-    }
 }
+
