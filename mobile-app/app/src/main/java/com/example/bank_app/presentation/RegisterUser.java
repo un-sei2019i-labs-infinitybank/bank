@@ -1,4 +1,4 @@
-package com.example.bank_app.businessLogic;
+package com.example.bank_app.presentation;
 
 import android.content.ContentValues;
 import android.content.Intent;

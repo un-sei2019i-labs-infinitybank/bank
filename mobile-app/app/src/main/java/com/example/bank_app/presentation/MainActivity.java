@@ -5,8 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.bank_app.businessLogic.LoginAdmin;
-import com.example.bank_app.businessLogic.LoginUser;
+import com.example.bank_app.presentation.LoginAdmin;
+import com.example.bank_app.presentation.LoginUser;
 import com.example.bank_app.R;
 
 public class MainActivity extends AppCompatActivity {
