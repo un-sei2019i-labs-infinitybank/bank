@@ -8,9 +8,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-import com.example.bank_app.DataAccess.database.database;
+
+import com.example.bank_app.dataAccess.database.Database;
 import com.example.bank_app.R;
-import com.example.bank_app.presentation.MainActivity;
 
 public class RegisterUser extends AppCompatActivity {
 
@@ -26,7 +26,7 @@ public class RegisterUser extends AppCompatActivity {
     }
 
     public void Registrar(View view){
-        database admin = new database(this, "gerence", null, 1);
+        Database admin = new Database(this, "gerence", null, 1);
         SQLiteDatabase db = admin.getWritableDatabase();
         String code = et_code.getText().toString();
         String user = et_user.getText().toString();
@@ -34,7 +34,7 @@ public class RegisterUser extends AppCompatActivity {
 
         ContentValues values = new ContentValues();
         values.put("code",code);
-        values.put("user",user);
+        values.put("User",user);
         values.put("password", password);
 
         db.insert("users",null,values);
