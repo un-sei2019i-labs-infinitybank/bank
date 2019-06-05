@@ -4,6 +4,7 @@ import com.example.bank_app.DataAccess.models.user;
 
 public class userRepository extends user{
 
+    user usuario = new user();
     public void createUser(){
 
     }
