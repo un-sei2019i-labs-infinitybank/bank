@@ -1,16 +1,46 @@
-package com.example.bank_app.dataAccess.models;
+package com.example.bank_app.DataAccess.models;
 
-public class User {
 
-    //User usuario = new User();
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.PrimaryKey;
+import android.support.annotation.NonNull;
+
+import java.util.UUID;
+
+
+@Entity(tableName="usuario")
+public class user {
+
+    //user usuario = new user();
+    @PrimaryKey
+    @NonNull
     private int id;
+    @ColumnInfo(name="name")
     private String name;
+    @ColumnInfo(name="account")
     private String account;
+    @ColumnInfo(name="password")
     private String password;
+    @ColumnInfo(name="balance")
     private long balance;
 
-    public String getId() {
-        return name;
+    public user(int id, String name, String account, String password, long balance){
+        this.id=id;
+        this.name=name;
+        this.account=account;
+        this.password=password;
+        this.balance=balance;
+    }
+
+    @NonNull
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
