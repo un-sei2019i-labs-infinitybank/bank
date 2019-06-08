@@ -1,5 +1,7 @@
-package com.example.bank_app.DataAccess.database;
+package com.example.bank_app.dataAccess.database;
 
+import com.example.bank_app.dataAccess.models.User;
+import com.example.bank_app.dataAccess.models.userDao;
 import android.arch.persistence.room.Database;
 import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
@@ -7,11 +9,9 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.example.bank_app.DataAccess.models.user;
-import com.example.bank_app.DataAccess.models.userDao;
 
 
-@Database(entities= user.class, version=1)
+@Database(entities= User.class, version=1)
 public abstract class database extends RoomDatabase {
     private static final String DB_NAME= "user_db";
     private static database instance;

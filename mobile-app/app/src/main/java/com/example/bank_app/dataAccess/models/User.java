@@ -1,4 +1,4 @@
-package com.example.bank_app.DataAccess.models;
+package com.example.bank_app.dataAccess.models;
 
 
 import android.arch.persistence.room.ColumnInfo;
@@ -10,31 +10,34 @@ import java.util.UUID;
 
 
 @Entity(tableName="usuario")
-public class user {
+public class User {
 
     //user usuario = new user();
     @PrimaryKey
     @NonNull
     private int id;
+    @NonNull
     @ColumnInfo(name="name")
-    private String name;
+    private String mName;
+    @NonNull
     @ColumnInfo(name="account")
-    private String account;
+    private String mAccount;
+    @NonNull
     @ColumnInfo(name="password")
-    private String password;
+    private String mPassword;
+    @NonNull
     @ColumnInfo(name="balance")
-    private long balance;
+    private long mBalance;
 
-    public user(int id, String name, String account, String password, long balance){
+    public User(int id, String name, String account, String password, long balance){
         this.id=id;
-        this.name=name;
-        this.account=account;
-        this.password=password;
-        this.balance=balance;
+        this.mName=name;
+        this.mAccount=account;
+        this.mPassword=password;
+        this.mBalance=balance;
     }
 
     @NonNull
-
     public int getId() {
         return id;
     }
@@ -42,36 +45,36 @@ public class user {
     public void setId(int id) {
         this.id = id;
     }
-
+    @NonNull
     public String getName() {
-        return name;
+        return mName;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.mName = name;
     }
-
+    @NonNull
     public String getAccount() {
-        return account;
+        return mAccount;
     }
 
     public void setAccount(String account) {
-        this.account = account;
+        this.mAccount = account;
     }
-
+    @NonNull
     public String getPassword() {
-        return password;
+        return mPassword;
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.mPassword = password;
     }
-
+    @NonNull
     public long getBalance() {
-        return balance;
+        return mBalance;
     }
 
     public void setBalance(long balance) {
-        this.balance = balance;
+        this.mBalance = balance;
     }
 }

@@ -1,5 +1,7 @@
 package com.example.bank_app.presentation;
 
+import android.app.Application;
+import android.arch.lifecycle.AndroidViewModel;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -9,14 +11,19 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.bank_app.dataAccess.database.Database;
+import com.example.bank_app.dataAccess.database.database;
+import com.example.bank_app.dataAccess.models.userDao;
 
 import com.example.bank_app.R;
 
-public class LoginUser extends AppCompatActivity {
+public class LoginUser extends AndroidViewModel {
 
     private EditText et_user, et_password;
+    private userDao useDao;
+    private database admin;
 
+    private String TAG = this.getClass().getSimpleName();
+    /*
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,10 +32,19 @@ public class LoginUser extends AppCompatActivity {
         et_user =(EditText)findViewById(R.id.txt_user);
         et_password =(EditText)findViewById(R.id.txt_pass);
     }
+    */
+    public LoginUser(Application application){
+        super(application);
+
+        //admin = database.getDatabase(application);
+
+    }
+
 
     //metodo login de usuario
-
+/*
     public void Ingresar(View view){
+
 
         Database admin = new Database(this, "gerence", null, 1);
         SQLiteDatabase db = admin.getWritableDatabase();
@@ -58,5 +74,6 @@ public class LoginUser extends AppCompatActivity {
         }
 
 
-    }
+    }*/
 }
+
