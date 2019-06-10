@@ -27,9 +27,9 @@ public abstract class database extends RoomDatabase {
         return instance;
     }
 
-    public abstract userDao getuserDAO();
-    public abstract AccountDao getAccountDAO();
-    //public abstract userDao userDAO();
+    public abstract userDao getuserDao();
+    public abstract AccountDao getAccountDao();
+    public abstract userDao getTransactionDao();
 
 }
 

@@ -2,6 +2,7 @@ package com.example.bank_app.presentation;
 
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
+import android.arch.persistence.room.Room;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -16,25 +17,26 @@ import com.example.bank_app.dataAccess.models.userDao;
 
 import com.example.bank_app.R;
 
-public class LoginUser extends AndroidViewModel {
+public class LoginUser extends AppCompatActivity {
 
     private EditText et_user, et_password;
     private userDao useDao;
-    private database admin;
+    public static database mydatabase;
 
-    private String TAG = this.getClass().getSimpleName();
-    /*
+    //private String TAG = this.getClass().getSimpleName();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_user);
+        mydatabase= Room.databaseBuilder(getApplicationContext(),database.class, "user_db").build();
 
         et_user =(EditText)findViewById(R.id.txt_user);
         et_password =(EditText)findViewById(R.id.txt_pass);
     }
-    */
+
     public LoginUser(Application application){
-        super(application);
+        //super(application);
 
         //admin = database.getDatabase(application);
 

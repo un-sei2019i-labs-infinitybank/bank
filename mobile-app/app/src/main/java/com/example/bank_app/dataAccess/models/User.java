@@ -12,7 +12,7 @@ import java.util.UUID;
 @Entity(tableName="usuario")
 public class User {
 
-    //user usuario = new user();
+    //User usuario = new User();
     @PrimaryKey
     @NonNull
     private int id;
@@ -29,6 +29,10 @@ public class User {
     @ColumnInfo(name="balance")
     private long mBalance;
 
+    public User(){
+
+    }
+
     public User(int id, String name, String account, String password, long balance){
         this.id=id;
         this.mName=name;
@@ -36,6 +40,8 @@ public class User {
         this.mPassword=password;
         this.mBalance=balance;
     }
+
+
 
     @NonNull
     public int getId() {
