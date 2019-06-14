@@ -4,14 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.activities.LoginAdmin">
+    tools:context=".presentation.activities.RegisterUser">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/linearLayout4"
         android:layout_width="0dp"
-        android:layout_height="624dp"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,41 +21,51 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/textView6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
             android:gravity="center"
-            android:text="Bienvenid@"
-            android:textSize="30sp" />
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="match_parent"
-            android:layout_height="291dp"
-            android:src="@mipmap/admin" />
+            android:text="Registro de Usuarios"
+            android:textSize="24sp" />
 
         <EditText
-            android:id="@+id/adminName"
+            android:id="@+id/id_user"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Administrador"
+            android:hint="Identificacion"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/et_RegistroNom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Nombres"
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/adminPass"
+            android:id="@+id/et_passRegistro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/prompt_password"
-            android:inputType="textPassword" />
+            android:inputType="textPersonName" />
 
-        <Button
-            android:id="@+id/btnLoginAdmin"
+        <EditText
+            android:id="@+id/et_NoCuenta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="signIn"
-            android:text="Ingresar" />
+            android:ems="10"
+            android:hint="N° de cuenta"
+            android:inputType="number" />
 
+        <Button
+            android:id="@+id/btn_registrarUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="registrar" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

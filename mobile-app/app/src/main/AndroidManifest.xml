@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.bank_app">
+    package="com.example.mobile_app">
 
     <application
         android:allowBackup="true"
@@ -9,11 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".presentation.UserPlataform"></activity>
-        <activity android:name=".businessLogic.LoginUser" />
-        <activity android:name=".businessLogic.LoginAdmin" />
-        <activity android:name=".businessLogic.RegisterUser" />
-        <activity android:name=".presentation.MainActivity">
+        <activity android:name=".ListUser"></activity>
+        <activity android:name=".presentation.activities.SearchUser" />
+        <activity android:name=".presentation.activities.RegisterUser" />
+        <activity android:name=".presentation.activities.LoginUser" />
+        <activity android:name=".presentation.activities.LoginAdmin" />
+        <activity
+            android:name=".ui.login.LoginAdmin"
+            android:label="@string/title_activity_login_admin" />
+        <activity android:name=".presentation.activities.UserManager" />
+        <activity android:name=".presentation.activities.SendMoneyActivity" />
+        <activity android:name=".presentation.activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
